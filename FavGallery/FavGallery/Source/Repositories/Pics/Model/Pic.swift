@@ -7,6 +7,9 @@
 
 import Foundation
 
-protocol Pic {
-    
+protocol Pic: AnyObject, Codable {
+    var title: String { get set }
+    var author: String { get set }
+    var thumbnailUrl: String { get set }
+    var url: String { get set }
 }
