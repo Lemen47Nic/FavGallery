@@ -9,5 +9,5 @@ import Foundation
 
 protocol PicsRepository {
     
-    static func get(by filter: String?, completion: @escaping (_ result: [Pic]?) -> Void)
+    static func get(by filter: String, completion: @escaping (_ result: AsyncCallResult<[Pic]?, Any?>) -> Void)
 }

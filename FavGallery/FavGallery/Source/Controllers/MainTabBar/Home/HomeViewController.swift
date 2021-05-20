@@ -16,4 +16,18 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
     var coordinator: HomeCoordinator? {
         _coordinator as? HomeCoordinator
     }
+    
+    private let picsService = PicsService()
+    
+    private var pics: [Pic]? {
+        didSet {
+            
+        }
+    }
+    
+    override func viewDidLoad() {
+        picsService.get(by: "cat") { [weak self] (pics) in
+            self?.pics = pics
+        }
+    }
 }

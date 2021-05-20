@@ -12,4 +12,12 @@ struct PicModel: Pic {
     var author: String
     var thumbnailUrl: String
     var url: String
+    
+    init() {
+        title = ""
+        author = ""
+        thumbnailUrl = ""
+        url = ""
+    }
 }
+
