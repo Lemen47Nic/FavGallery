@@ -10,6 +10,7 @@
 		A682B8632656EF970015A426 /* NavigationJumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682B8622656EF970015A426 /* NavigationJumper.swift */; };
 		A682B87C2656F69F0015A426 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682B87B2656F69F0015A426 /* NetworkHandler.swift */; };
 		A682B8802656F95C0015A426 /* AsyncCallResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682B87F2656F95C0015A426 /* AsyncCallResult.swift */; };
+		A682B8C2265701790015A426 /* FavGalleryURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682B8C1265701790015A426 /* FavGalleryURL.swift */; };
 		A683C21C2656463E005B0E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A683C2062656463E005B0E6A /* LaunchScreen.storyboard */; };
 		A683C21D2656463E005B0E6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A683C2082656463E005B0E6A /* Main.storyboard */; };
 		A683C21E2656463E005B0E6A /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683C20B2656463E005B0E6A /* Storyboarded.swift */; };
@@ -32,6 +33,7 @@
 		A682B8622656EF970015A426 /* NavigationJumper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationJumper.swift; sourceTree = "<group>"; };
 		A682B87B2656F69F0015A426 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		A682B87F2656F95C0015A426 /* AsyncCallResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCallResult.swift; sourceTree = "<group>"; };
+		A682B8C1265701790015A426 /* FavGalleryURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavGalleryURL.swift; sourceTree = "<group>"; };
 		A683C2072656463E005B0E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A683C2092656463E005B0E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A683C20B2656463E005B0E6A /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				A683C20C2656463E005B0E6A /* Coordinator.swift */,
 				A682B8622656EF970015A426 /* NavigationJumper.swift */,
 				A682B87F2656F95C0015A426 /* AsyncCallResult.swift */,
+				A682B8C1265701790015A426 /* FavGalleryURL.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				A683C2282656463E005B0E6A /* MainTabBarCoordinator.swift in Sources */,
 				A683C2272656463E005B0E6A /* MainTabBarViewController.swift in Sources */,
 				A683C21E2656463E005B0E6A /* Storyboarded.swift in Sources */,
+				A682B8C2265701790015A426 /* FavGalleryURL.swift in Sources */,
 				A683C2252656463E005B0E6A /* FavoriteViewController.swift in Sources */,
 				A682B87C2656F69F0015A426 /* NetworkHandler.swift in Sources */,
 				A682B8802656F95C0015A426 /* AsyncCallResult.swift in Sources */,
