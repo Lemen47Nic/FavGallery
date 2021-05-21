@@ -15,11 +15,12 @@ class CarouselCoordinator: NSObject, Coordinator, UINavigationControllerDelegate
     var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     
-    init(navigationController: UINavigationController, pics: [Pic]) {
+    init(navigationController: UINavigationController, pics: [Pic], selectedIndex: Int) {
         self.navigationController = navigationController
     
         let vc = CarouselViewController.instantiate()
         vc.pics = pics
+        vc.selectedIndex = selectedIndex
         viewController = vc
     }
 }

@@ -20,9 +20,14 @@ class CarouselViewController: UIViewController, Storyboarded, CoordinatedControl
     @IBOutlet weak private var carousel: CarouselCollectionView!
     
     var pics: [Pic]?
+    var selectedIndex: Int = 0
     
     override func viewDidLoad() {
         carousel.pics = pics
+    }
+    
+    override func viewDidLayoutSubviews() {
+        carousel.scrollTo(index: selectedIndex)
     }
     
     @IBAction func close(_ sender: Any) {

@@ -61,4 +61,13 @@ class CarouselCollectionView: UIView, UICollectionViewDelegate, UICollectionView
         let height = screenSize.height
         return CGSize(width: width , height: height)
     }
+    
+    func scrollTo(index: Int) {
+        DispatchQueue.main.async{ [weak self] in
+            // For iOS 14 - Apparently there is a new bug in UICollectionView that is causing scrollToItem to not work when paging is enabled.
+            self?.collectionView.isPagingEnabled = false
+            self?.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: false)
+            self?.collectionView.isPagingEnabled = true
+         }
+    }
 }

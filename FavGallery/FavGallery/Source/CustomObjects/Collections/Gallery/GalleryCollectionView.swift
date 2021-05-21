@@ -8,7 +8,7 @@
 import UIKit
 
 protocol GalleryDelegate: AnyObject {
-    func didItemSelected()
+    func didItemSelected(selectedIndex: Int)
 }
 
 class GalleryCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -75,6 +75,6 @@ class GalleryCollectionView: UIView, UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didItemSelected()
+        delegate?.didItemSelected(selectedIndex: indexPath.item)
     }
 }
