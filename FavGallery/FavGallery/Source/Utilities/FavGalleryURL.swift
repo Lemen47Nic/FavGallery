@@ -15,7 +15,7 @@ enum FavGalleryURL {
         var baseUrl = "https://www.reddit.com/"
         
         switch self {
-        case get(let filter):
+        case .get(let filter):
             return "\(baseUrl)r/\(filter)/top.json"
         }
     }

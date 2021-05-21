@@ -17,6 +17,7 @@ class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        navigationController.setNavigationBarHidden(true, animated: false)
     
         let vc = HomeViewController.instantiate()
         viewController = vc
