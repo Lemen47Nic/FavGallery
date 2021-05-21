@@ -1,15 +1,15 @@
 //
-//  HomeCoordinator.swift
+//  CarouselCoordinator.swift
 //  FavGallery
 //
-//  Created by naspes on 20/05/21.
+//  Created by naspes on 21/05/21.
 //
 
 import UIKit
 
-class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
+class CarouselCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     
-    var showingKind: ShowingKind = .push
+    var showingKind: ShowingKind = .present
     var viewController: CoordinatedController
     var navigationController: UINavigationController
     var parentCoordinator: Coordinator?
@@ -19,15 +19,7 @@ class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         self.navigationController = navigationController
         navigationController.setNavigationBarHidden(true, animated: false)
     
-        let vc = HomeViewController.instantiate()
+        let vc = CarouselViewController.instantiate()
         viewController = vc
     }
-    
-    func showCarousel() {
-        let child = CarouselCoordinator(navigationController: navigationController)
-        childCoordinators.append(child)
-        child.parentCoordinator = self
-        child.start()
-    }
 }
-    

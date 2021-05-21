@@ -22,8 +22,18 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
     private let picsService = PicsService()
     
     override func viewDidLoad() {
+        
+        gallery.delegate = self
+        
         picsService.get(by: "cat") { [weak self] (pics) in
             self?.gallery.pics = pics
         }
+    }
+}
+
+extension HomeViewController: GalleryDelegate {
+    
+    func didItemSelected() {
+        coordinator?.showCarousel()
     }
 }

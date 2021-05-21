@@ -36,6 +36,8 @@
 		A6D3DE2726583F4800D93371 /* GalleryCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D3DE2626583F4800D93371 /* GalleryCollectionView.xib */; };
 		A6D3DE2C265840EA00D93371 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE2B265840EA00D93371 /* UIViewExtensions.swift */; };
 		A6D3DE2F265846CF00D93371 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE2E265846CF00D93371 /* UIImageExtensions.swift */; };
+		A6D3DE3D2658533300D93371 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE3C2658533300D93371 /* CarouselViewController.swift */; };
+		A6D3DE412658533A00D93371 /* CarouselCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE402658533A00D93371 /* CarouselCoordinator.swift */; };
 		A6F7966226563A0400E9B0D8 /* FavGallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6F7966026563A0400E9B0D8 /* FavGallery.xcdatamodeld */; };
 		A6F7966426563A0400E9B0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F7966326563A0400E9B0D8 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		A6D3DE2626583F4800D93371 /* GalleryCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionView.xib; sourceTree = "<group>"; };
 		A6D3DE2B265840EA00D93371 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		A6D3DE2E265846CF00D93371 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		A6D3DE3C2658533300D93371 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
+		A6D3DE402658533A00D93371 /* CarouselCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCoordinator.swift; sourceTree = "<group>"; };
 		A6F7965426563A0400E9B0D8 /* FavGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F7966126563A0400E9B0D8 /* FavGallery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavGallery.xcdatamodel; sourceTree = "<group>"; };
 		A6F7966326563A0400E9B0D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 		A682B8DE265702430015A426 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A6D3DE3B2658531800D93371 /* Carousel */,
 				A682B8DF265702430015A426 /* HomeViewController.swift */,
 				A682B8E0265702430015A426 /* HomeCoordinator.swift */,
 			);
@@ -241,6 +246,15 @@
 				A6D3DE2E265846CF00D93371 /* UIImageExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A6D3DE3B2658531800D93371 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				A6D3DE3C2658533300D93371 /* CarouselViewController.swift */,
+				A6D3DE402658533A00D93371 /* CarouselCoordinator.swift */,
+			);
+			path = Carousel;
 			sourceTree = "<group>";
 		};
 		A6F7964B26563A0400E9B0D8 = {
@@ -349,6 +363,7 @@
 				A682B8F2265702430015A426 /* PicsService.swift in Sources */,
 				A6D3DE2F265846CF00D93371 /* UIImageExtensions.swift in Sources */,
 				A682B8F1265702430015A426 /* PicsRepository.swift in Sources */,
+				A6D3DE3D2658533300D93371 /* CarouselViewController.swift in Sources */,
 				A682B8F5265702430015A426 /* NavigationJumper.swift in Sources */,
 				A682B8FA265702430015A426 /* HomeCoordinator.swift in Sources */,
 				A682B8EF265702430015A426 /* Pic.swift in Sources */,
@@ -367,6 +382,7 @@
 				A6D3DE2C265840EA00D93371 /* UIViewExtensions.swift in Sources */,
 				A682B8F4265702430015A426 /* Storyboarded.swift in Sources */,
 				A682B8FC265702430015A426 /* CameraCoordinator.swift in Sources */,
+				A6D3DE412658533A00D93371 /* CarouselCoordinator.swift in Sources */,
 				A682B901265702430015A426 /* NetworkHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

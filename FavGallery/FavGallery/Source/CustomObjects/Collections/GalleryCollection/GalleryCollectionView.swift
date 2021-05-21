@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol GalleryDelegate {
+    func didItemSelected()
+}
+
 class GalleryCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak private var collectionView: UICollectionView!
+    
+    var delegate: GalleryDelegate?
     
     var pics: [Pic]? {
         didSet {
@@ -66,5 +72,9 @@ class GalleryCollectionView: UIView, UICollectionViewDelegate, UICollectionViewD
         let width = screenSize.width / 3
         let height = screenSize.height / 6
         return CGSize(width: width , height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didItemSelected()
     }
 }
