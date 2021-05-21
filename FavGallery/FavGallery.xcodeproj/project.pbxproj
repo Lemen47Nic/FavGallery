@@ -38,6 +38,10 @@
 		A6D3DE2F265846CF00D93371 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE2E265846CF00D93371 /* UIImageExtensions.swift */; };
 		A6D3DE3D2658533300D93371 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE3C2658533300D93371 /* CarouselViewController.swift */; };
 		A6D3DE412658533A00D93371 /* CarouselCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE402658533A00D93371 /* CarouselCoordinator.swift */; };
+		A6D3DE46265858DE00D93371 /* CarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE45265858DE00D93371 /* CarouselCollectionView.swift */; };
+		A6D3DE49265858E800D93371 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE48265858E800D93371 /* CarouselCollectionViewCell.swift */; };
+		A6D3DE4C265858EF00D93371 /* CarouselCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D3DE4B265858EF00D93371 /* CarouselCollectionView.xib */; };
+		A6D3DE4F265858F300D93371 /* CarouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D3DE4E265858F300D93371 /* CarouselCollectionViewCell.xib */; };
 		A6F7966226563A0400E9B0D8 /* FavGallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6F7966026563A0400E9B0D8 /* FavGallery.xcdatamodeld */; };
 		A6F7966426563A0400E9B0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F7966326563A0400E9B0D8 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -74,6 +78,10 @@
 		A6D3DE2E265846CF00D93371 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		A6D3DE3C2658533300D93371 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		A6D3DE402658533A00D93371 /* CarouselCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCoordinator.swift; sourceTree = "<group>"; };
+		A6D3DE45265858DE00D93371 /* CarouselCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionView.swift; sourceTree = "<group>"; };
+		A6D3DE48265858E800D93371 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		A6D3DE4B265858EF00D93371 /* CarouselCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCollectionView.xib; sourceTree = "<group>"; };
+		A6D3DE4E265858F300D93371 /* CarouselCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCollectionViewCell.xib; sourceTree = "<group>"; };
 		A6F7965426563A0400E9B0D8 /* FavGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F7966126563A0400E9B0D8 /* FavGallery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavGallery.xcdatamodel; sourceTree = "<group>"; };
 		A6F7966326563A0400E9B0D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -223,12 +231,13 @@
 		A6D3DE1726583D1500D93371 /* Collections */ = {
 			isa = PBXGroup;
 			children = (
-				A6D3DE1E26583DA800D93371 /* GalleryCollection */,
+				A6D3DE43265858BF00D93371 /* Carousel */,
+				A6D3DE1E26583DA800D93371 /* Gallery */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
 		};
-		A6D3DE1E26583DA800D93371 /* GalleryCollection */ = {
+		A6D3DE1E26583DA800D93371 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
 				A6D3DE1826583D2600D93371 /* GalleryCollectionView.swift */,
@@ -236,7 +245,7 @@
 				A6D3DE1F26583EDF00D93371 /* GalleryCollectionViewCell.swift */,
 				A6D3DE2326583EEA00D93371 /* GalleryCollectionViewCell.xib */,
 			);
-			path = GalleryCollection;
+			path = Gallery;
 			sourceTree = "<group>";
 		};
 		A6D3DE2A265840DC00D93371 /* Extensions */ = {
@@ -253,6 +262,17 @@
 			children = (
 				A6D3DE3C2658533300D93371 /* CarouselViewController.swift */,
 				A6D3DE402658533A00D93371 /* CarouselCoordinator.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		A6D3DE43265858BF00D93371 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				A6D3DE45265858DE00D93371 /* CarouselCollectionView.swift */,
+				A6D3DE4B265858EF00D93371 /* CarouselCollectionView.xib */,
+				A6D3DE48265858E800D93371 /* CarouselCollectionViewCell.swift */,
+				A6D3DE4E265858F300D93371 /* CarouselCollectionViewCell.xib */,
 			);
 			path = Carousel;
 			sourceTree = "<group>";
@@ -345,6 +365,8 @@
 				A6D3DE2426583EEA00D93371 /* GalleryCollectionViewCell.xib in Resources */,
 				A6F7966426563A0400E9B0D8 /* Assets.xcassets in Resources */,
 				A682B8EC265702430015A426 /* LaunchScreen.storyboard in Resources */,
+				A6D3DE4C265858EF00D93371 /* CarouselCollectionView.xib in Resources */,
+				A6D3DE4F265858F300D93371 /* CarouselCollectionViewCell.xib in Resources */,
 				A6D3DE2726583F4800D93371 /* GalleryCollectionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,11 +382,13 @@
 				A6D3DE2026583EDF00D93371 /* GalleryCollectionViewCell.swift in Sources */,
 				A682B8F3265702430015A426 /* AsyncCallResult.swift in Sources */,
 				A6D3DE1926583D2600D93371 /* GalleryCollectionView.swift in Sources */,
+				A6D3DE46265858DE00D93371 /* CarouselCollectionView.swift in Sources */,
 				A682B8F2265702430015A426 /* PicsService.swift in Sources */,
 				A6D3DE2F265846CF00D93371 /* UIImageExtensions.swift in Sources */,
 				A682B8F1265702430015A426 /* PicsRepository.swift in Sources */,
 				A6D3DE3D2658533300D93371 /* CarouselViewController.swift in Sources */,
 				A682B8F5265702430015A426 /* NavigationJumper.swift in Sources */,
+				A6D3DE49265858E800D93371 /* CarouselCollectionViewCell.swift in Sources */,
 				A682B8FA265702430015A426 /* HomeCoordinator.swift in Sources */,
 				A682B8EF265702430015A426 /* Pic.swift in Sources */,
 				A682B902265702430015A426 /* SceneDelegate.swift in Sources */,

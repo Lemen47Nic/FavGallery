@@ -15,11 +15,11 @@ class CarouselCoordinator: NSObject, Coordinator, UINavigationControllerDelegate
     var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, pics: [Pic]) {
         self.navigationController = navigationController
-        navigationController.setNavigationBarHidden(true, animated: false)
     
         let vc = CarouselViewController.instantiate()
+        vc.pics = pics
         viewController = vc
     }
 }

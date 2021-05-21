@@ -34,6 +34,7 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
 extension HomeViewController: GalleryDelegate {
     
     func didItemSelected() {
-        coordinator?.showCarousel()
+        guard let pics = gallery.pics else { return }
+        coordinator?.showCarousel(pics: pics)
     }
 }

@@ -17,6 +17,14 @@ class CarouselViewController: UIViewController, Storyboarded, CoordinatedControl
         _coordinator as? CarouselCoordinator
     }
     
+    @IBOutlet weak private var carousel: CarouselCollectionView!
+    
+    var pics: [Pic]?
+    
+    override func viewDidLoad() {
+        carousel.pics = pics
+    }
+    
     @IBAction func close(_ sender: Any) {
         coordinator?.end()
     }
