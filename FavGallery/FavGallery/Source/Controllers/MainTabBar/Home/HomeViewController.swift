@@ -17,17 +17,13 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
         _coordinator as? HomeCoordinator
     }
     
-    private let picsService = PicsService()
+    @IBOutlet weak private var gallery: GalleryCollectionView!
     
-    private var pics: [Pic]? {
-        didSet {
-            
-        }
-    }
+    private let picsService = PicsService()
     
     override func viewDidLoad() {
         picsService.get(by: "cat") { [weak self] (pics) in
-            self?.pics = pics
+            self?.gallery.pics = pics
         }
     }
 }

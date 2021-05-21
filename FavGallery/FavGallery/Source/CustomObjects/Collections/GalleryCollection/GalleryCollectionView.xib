@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GalleryCollectionView" customModule="FavGallery" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="jxq-gO-6Bd" id="240-jl-mEV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EP1-VT-gIq">
+            <rect key="frame" x="0.0" y="0.0" width="434" height="390"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vr-37-TDl" userLabel="ContainerView">
+                    <rect key="frame" x="0.0" y="0.0" width="434" height="390"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jxq-gO-6Bd">
+                            <rect key="frame" x="0.0" y="0.0" width="434" height="390"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="390" id="oqW-Tz-s5M"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="KcA-gy-HsH">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="jxq-gO-6Bd" secondAttribute="bottom" id="7Pl-LL-FKw"/>
+                        <constraint firstAttribute="trailing" secondItem="jxq-gO-6Bd" secondAttribute="trailing" id="Cdc-3q-2ah"/>
+                        <constraint firstItem="jxq-gO-6Bd" firstAttribute="leading" secondItem="2Vr-37-TDl" secondAttribute="leading" id="JSv-Dw-A24"/>
+                        <constraint firstItem="jxq-gO-6Bd" firstAttribute="top" secondItem="2Vr-37-TDl" secondAttribute="top" id="cKJ-0f-hkD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="h6P-zs-PWG"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="2Vr-37-TDl" secondAttribute="bottom" id="0px-xL-RJF"/>
+                <constraint firstItem="2Vr-37-TDl" firstAttribute="leading" secondItem="EP1-VT-gIq" secondAttribute="leading" id="O1N-zE-ddY"/>
+                <constraint firstItem="2Vr-37-TDl" firstAttribute="top" secondItem="EP1-VT-gIq" secondAttribute="top" id="bYz-xx-CH4"/>
+                <constraint firstAttribute="trailing" secondItem="2Vr-37-TDl" secondAttribute="trailing" id="bZe-XH-6ym"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-962" y="119"/>
+        </view>
+    </objects>
+</document>

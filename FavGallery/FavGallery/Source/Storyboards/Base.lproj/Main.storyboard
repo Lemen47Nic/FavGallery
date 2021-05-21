@@ -18,6 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,9 +31,25 @@
                     <view key="view" contentMode="scaleToFill" id="UMA-b3-ge2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cby-sP-X8g" customClass="GalleryCollectionView" customModule="FavGallery" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Wzj-Nu-WQR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wzj-Nu-WQR" firstAttribute="trailing" secondItem="Cby-sP-X8g" secondAttribute="trailing" id="HXD-Wa-33r"/>
+                            <constraint firstItem="Wzj-Nu-WQR" firstAttribute="bottom" secondItem="Cby-sP-X8g" secondAttribute="bottom" id="caD-fl-Trl"/>
+                            <constraint firstItem="Cby-sP-X8g" firstAttribute="top" secondItem="Wzj-Nu-WQR" secondAttribute="top" id="ccy-VK-E0J"/>
+                            <constraint firstItem="Cby-sP-X8g" firstAttribute="leading" secondItem="Wzj-Nu-WQR" secondAttribute="leading" id="tON-1d-3J9"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="gallery" destination="Cby-sP-X8g" id="nt3-do-4Dw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KcJ-HJ-ZAe" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,6 +65,7 @@
                         <viewLayoutGuide key="safeArea" id="BiH-6s-zTA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16d-u1-u4a" sceneMemberID="firstResponder"/>
             </objects>
