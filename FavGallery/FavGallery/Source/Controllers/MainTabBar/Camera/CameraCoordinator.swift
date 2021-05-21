@@ -17,7 +17,8 @@ class CameraCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-    
+        navigationController.setNavigationBarHidden(true, animated: false)
+        
         let vc = CameraViewController.instantiate()
         viewController = vc
     }

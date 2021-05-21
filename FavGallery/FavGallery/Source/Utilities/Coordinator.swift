@@ -38,7 +38,6 @@ extension Coordinator {
         
         switch showingKind {
         case .push:
-            navigationController.setNavigationBarHidden(false, animated: true)
             navigationController.pushViewController(viewController, animated: true)
         case .present:
             let navController = UINavigationController(rootViewController: viewController)

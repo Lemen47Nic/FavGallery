@@ -17,6 +17,7 @@ class FavoriteCoordinator: NSObject, Coordinator, UINavigationControllerDelegate
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        navigationController.setNavigationBarHidden(true, animated: false)
     
         let vc = FavoriteViewController.instantiate()
         viewController = vc
