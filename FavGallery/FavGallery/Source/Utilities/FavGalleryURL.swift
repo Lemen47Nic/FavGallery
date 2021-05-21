@@ -12,7 +12,7 @@ enum FavGalleryURL {
     case get(filter: String)
     
     var url: String {
-        var baseUrl = "https://www.reddit.com/"
+        let baseUrl = "https://www.reddit.com/"
         
         switch self {
         case .get(let filter):
