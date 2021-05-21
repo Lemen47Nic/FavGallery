@@ -1,5 +1,5 @@
 //
-//  URL.swift
+//  FavGalleryURL.swift
 //  FavGallery
 //
 //  Created by naspes on 20/05/21.
