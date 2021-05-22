@@ -30,8 +30,7 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
         searchBar.delegate = self
         gallery.delegate = self
         
-        //        let filter = randomDefaultFilter()
-        let filter = "cat"
+        let filter = randomDefaultFilter()
         searchBar.text = filter
         updateGallery(filter: filter)
         
