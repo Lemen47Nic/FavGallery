@@ -71,8 +71,48 @@
             </objects>
             <point key="canvasLocation" x="630" y="102"/>
         </scene>
+        <!--Carousel View Controller-->
+        <scene sceneID="dwB-2P-LDM">
+            <objects>
+                <viewController storyboardIdentifier="CarouselViewController" id="TIV-C3-sqp" customClass="CarouselViewController" customModule="FavGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CDU-ak-osP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88a-w9-Gh1" customClass="CarouselCollectionView" customModule="FavGallery" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CXl-FF-SWY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CXl-FF-SWY" firstAttribute="trailing" secondItem="88a-w9-Gh1" secondAttribute="trailing" id="2OL-2r-ena"/>
+                            <constraint firstItem="88a-w9-Gh1" firstAttribute="top" secondItem="CXl-FF-SWY" secondAttribute="top" id="38g-m1-UEI"/>
+                            <constraint firstItem="88a-w9-Gh1" firstAttribute="leading" secondItem="CXl-FF-SWY" secondAttribute="leading" id="A8e-tN-Z79"/>
+                            <constraint firstItem="CXl-FF-SWY" firstAttribute="bottom" secondItem="88a-w9-Gh1" secondAttribute="bottom" id="Zv7-lt-rec"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Iyl-u4-VYY">
+                        <barButtonItem key="leftBarButtonItem" image="square.split.diagonal.2x2.fill" catalog="system" id="5Ls-xu-E8L">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="close:" destination="TIV-C3-sqp" id="T9V-up-8bx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="carousel" destination="88a-w9-Gh1" id="0Qb-xI-pSK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VtU-g5-05D" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="-664"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="square.split.diagonal.2x2.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

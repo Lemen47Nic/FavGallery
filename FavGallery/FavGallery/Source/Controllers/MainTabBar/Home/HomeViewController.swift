@@ -24,11 +24,22 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
     override func viewDidLoad() {
+        
+        gallery.delegate = self
+        
         picsService.get(by: "cat") { [weak self] (pics) in
             self?.gallery.pics = pics
         }
         
         // change status bar style (work only on physical device)
         self.setNeedsStatusBarAppearanceUpdate()
+    }
+}
+
+extension HomeViewController: GalleryDelegate {
+    
+    func didItemSelected(selectedIndex: Int) {
+        guard let pics = gallery.pics else { return }
+        coordinator?.showCarousel(pics: pics, selectedIndex: selectedIndex)
     }
 }

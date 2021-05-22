@@ -1,5 +1,5 @@
 //
-//  GalleryCollectionView.swift
+//  CarouselCollectionView.swift
 //  FavGallery
 //
 //  Created by naspes on 21/05/21.
@@ -7,22 +7,16 @@
 
 import UIKit
 
-class GalleryCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class CarouselCollectionView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak private var collectionView: UICollectionView!
     
-    var pics: [Pic]? {
-        didSet {
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
-    }
+    var pics: [Pic]?
     
     // called when built from code
     override init(frame: CGRect) {
         super.init(frame: frame)
-        guard let view = loadFromNib("GalleryCollectionView") else { return }
+        guard let view = loadFromNib("CarouselCollectionView") else { return }
         self.addSubview(view)
         setup()
     }
@@ -30,7 +24,7 @@ class GalleryCollectionView: UIView, UICollectionViewDelegate, UICollectionViewD
     // called when built from xib
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        guard let view = loadFromNib("GalleryCollectionView") else { return }
+        guard let view = loadFromNib("CarouselCollectionView") else { return }
         self.addSubview(view)
     }
     
@@ -42,7 +36,7 @@ class GalleryCollectionView: UIView, UICollectionViewDelegate, UICollectionViewD
     private func setup() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: "galleryCollectionViewCell")
+        collectionView.register(CarouselCollectionViewCell.self, forCellWithReuseIdentifier: "carouselCollectionViewCell")
         
     }
     
@@ -51,7 +45,7 @@ class GalleryCollectionView: UIView, UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "galleryCollectionViewCell", for: indexPath) as! GalleryCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "carouselCollectionViewCell", for: indexPath) as! CarouselCollectionViewCell
         
         cell.pic = pics?[indexPath.item]
         
@@ -62,17 +56,15 @@ class GalleryCollectionView: UIView, UICollectionViewDelegate, UICollectionViewD
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let interfaceOrientation = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.windowScene?.interfaceOrientation
-        
-        let screenSize: CGRect = UIScreen.main.bounds
-        var width = screenSize.width / 3
-        var height = screenSize.height / 6
-        
-        if interfaceOrientation?.isLandscape ?? false {
-            width = screenSize.width / 6
-            height = screenSize.width / 5
-        }
-        
-        return CGSize(width: width , height: height)
+        return collectionView.frame.size
+    }
+    
+    func scrollTo(index: Int) {
+        DispatchQueue.main.async{ [weak self] in
+            // For iOS 14 - Apparently there is a new bug in UICollectionView that is causing scrollToItem to not work when paging is enabled.
+            self?.collectionView.isPagingEnabled = false
+            self?.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: false)
+            self?.collectionView.isPagingEnabled = true
+         }
     }
 }

@@ -36,6 +36,16 @@
 		A6D3DE2726583F4800D93371 /* GalleryCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D3DE2626583F4800D93371 /* GalleryCollectionView.xib */; };
 		A6D3DE2C265840EA00D93371 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE2B265840EA00D93371 /* UIViewExtensions.swift */; };
 		A6D3DE2F265846CF00D93371 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE2E265846CF00D93371 /* UIImageExtensions.swift */; };
+		A6D3DE3D2658533300D93371 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE3C2658533300D93371 /* CarouselViewController.swift */; };
+		A6D3DE412658533A00D93371 /* CarouselCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE402658533A00D93371 /* CarouselCoordinator.swift */; };
+		A6D3DE46265858DE00D93371 /* CarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE45265858DE00D93371 /* CarouselCollectionView.swift */; };
+		A6D3DE49265858E800D93371 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE48265858E800D93371 /* CarouselCollectionViewCell.swift */; };
+		A6D3DE4C265858EF00D93371 /* CarouselCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D3DE4B265858EF00D93371 /* CarouselCollectionView.xib */; };
+		A6D3DE4F265858F300D93371 /* CarouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D3DE4E265858F300D93371 /* CarouselCollectionViewCell.xib */; };
+		A6D3DE5A2658F2FD00D93371 /* ZoomableImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D3DE592658F2FD00D93371 /* ZoomableImage.xib */; };
+		A6D3DE5D2658F30800D93371 /* ZoomableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE5C2658F30800D93371 /* ZoomableImage.swift */; };
+		A6D3DE642659003200D93371 /* PicInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE632659003200D93371 /* PicInfoView.swift */; };
+		A6D3DE682659003700D93371 /* PicInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D3DE672659003700D93371 /* PicInfoView.xib */; };
 		A6F7966226563A0400E9B0D8 /* FavGallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6F7966026563A0400E9B0D8 /* FavGallery.xcdatamodeld */; };
 		A6F7966426563A0400E9B0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F7966326563A0400E9B0D8 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -70,6 +80,16 @@
 		A6D3DE2626583F4800D93371 /* GalleryCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionView.xib; sourceTree = "<group>"; };
 		A6D3DE2B265840EA00D93371 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		A6D3DE2E265846CF00D93371 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		A6D3DE3C2658533300D93371 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
+		A6D3DE402658533A00D93371 /* CarouselCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCoordinator.swift; sourceTree = "<group>"; };
+		A6D3DE45265858DE00D93371 /* CarouselCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionView.swift; sourceTree = "<group>"; };
+		A6D3DE48265858E800D93371 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		A6D3DE4B265858EF00D93371 /* CarouselCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCollectionView.xib; sourceTree = "<group>"; };
+		A6D3DE4E265858F300D93371 /* CarouselCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCollectionViewCell.xib; sourceTree = "<group>"; };
+		A6D3DE592658F2FD00D93371 /* ZoomableImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoomableImage.xib; sourceTree = "<group>"; };
+		A6D3DE5C2658F30800D93371 /* ZoomableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableImage.swift; sourceTree = "<group>"; };
+		A6D3DE632659003200D93371 /* PicInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicInfoView.swift; sourceTree = "<group>"; };
+		A6D3DE672659003700D93371 /* PicInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicInfoView.xib; sourceTree = "<group>"; };
 		A6F7965426563A0400E9B0D8 /* FavGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F7966126563A0400E9B0D8 /* FavGallery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavGallery.xcdatamodel; sourceTree = "<group>"; };
 		A6F7966326563A0400E9B0D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +195,7 @@
 		A682B8DE265702430015A426 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A6D3DE3B2658531800D93371 /* Carousel */,
 				A682B8DF265702430015A426 /* HomeViewController.swift */,
 				A682B8E0265702430015A426 /* HomeCoordinator.swift */,
 			);
@@ -210,6 +231,7 @@
 		A6D3DE1626583D0500D93371 /* CustomObjects */ = {
 			isa = PBXGroup;
 			children = (
+				A6D3DE572658F2E700D93371 /* Views */,
 				A6D3DE1726583D1500D93371 /* Collections */,
 			);
 			path = CustomObjects;
@@ -218,12 +240,13 @@
 		A6D3DE1726583D1500D93371 /* Collections */ = {
 			isa = PBXGroup;
 			children = (
-				A6D3DE1E26583DA800D93371 /* GalleryCollection */,
+				A6D3DE43265858BF00D93371 /* Carousel */,
+				A6D3DE1E26583DA800D93371 /* Gallery */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
 		};
-		A6D3DE1E26583DA800D93371 /* GalleryCollection */ = {
+		A6D3DE1E26583DA800D93371 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
 				A6D3DE1826583D2600D93371 /* GalleryCollectionView.swift */,
@@ -231,7 +254,7 @@
 				A6D3DE1F26583EDF00D93371 /* GalleryCollectionViewCell.swift */,
 				A6D3DE2326583EEA00D93371 /* GalleryCollectionViewCell.xib */,
 			);
-			path = GalleryCollection;
+			path = Gallery;
 			sourceTree = "<group>";
 		};
 		A6D3DE2A265840DC00D93371 /* Extensions */ = {
@@ -241,6 +264,53 @@
 				A6D3DE2E265846CF00D93371 /* UIImageExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A6D3DE3B2658531800D93371 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				A6D3DE3C2658533300D93371 /* CarouselViewController.swift */,
+				A6D3DE402658533A00D93371 /* CarouselCoordinator.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		A6D3DE43265858BF00D93371 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				A6D3DE45265858DE00D93371 /* CarouselCollectionView.swift */,
+				A6D3DE4B265858EF00D93371 /* CarouselCollectionView.xib */,
+				A6D3DE48265858E800D93371 /* CarouselCollectionViewCell.swift */,
+				A6D3DE4E265858F300D93371 /* CarouselCollectionViewCell.xib */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		A6D3DE572658F2E700D93371 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A6D3DE622658FFFE00D93371 /* PicInfo */,
+				A6D3DE582658F2EF00D93371 /* ZoomableImage */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A6D3DE582658F2EF00D93371 /* ZoomableImage */ = {
+			isa = PBXGroup;
+			children = (
+				A6D3DE592658F2FD00D93371 /* ZoomableImage.xib */,
+				A6D3DE5C2658F30800D93371 /* ZoomableImage.swift */,
+			);
+			path = ZoomableImage;
+			sourceTree = "<group>";
+		};
+		A6D3DE622658FFFE00D93371 /* PicInfo */ = {
+			isa = PBXGroup;
+			children = (
+				A6D3DE632659003200D93371 /* PicInfoView.swift */,
+				A6D3DE672659003700D93371 /* PicInfoView.xib */,
+			);
+			path = PicInfo;
 			sourceTree = "<group>";
 		};
 		A6F7964B26563A0400E9B0D8 = {
@@ -330,7 +400,11 @@
 				A682B8ED265702430015A426 /* Main.storyboard in Resources */,
 				A6D3DE2426583EEA00D93371 /* GalleryCollectionViewCell.xib in Resources */,
 				A6F7966426563A0400E9B0D8 /* Assets.xcassets in Resources */,
+				A6D3DE682659003700D93371 /* PicInfoView.xib in Resources */,
 				A682B8EC265702430015A426 /* LaunchScreen.storyboard in Resources */,
+				A6D3DE4C265858EF00D93371 /* CarouselCollectionView.xib in Resources */,
+				A6D3DE4F265858F300D93371 /* CarouselCollectionViewCell.xib in Resources */,
+				A6D3DE5A2658F2FD00D93371 /* ZoomableImage.xib in Resources */,
 				A6D3DE2726583F4800D93371 /* GalleryCollectionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,13 +420,18 @@
 				A6D3DE2026583EDF00D93371 /* GalleryCollectionViewCell.swift in Sources */,
 				A682B8F3265702430015A426 /* AsyncCallResult.swift in Sources */,
 				A6D3DE1926583D2600D93371 /* GalleryCollectionView.swift in Sources */,
+				A6D3DE46265858DE00D93371 /* CarouselCollectionView.swift in Sources */,
 				A682B8F2265702430015A426 /* PicsService.swift in Sources */,
 				A6D3DE2F265846CF00D93371 /* UIImageExtensions.swift in Sources */,
 				A682B8F1265702430015A426 /* PicsRepository.swift in Sources */,
+				A6D3DE3D2658533300D93371 /* CarouselViewController.swift in Sources */,
 				A682B8F5265702430015A426 /* NavigationJumper.swift in Sources */,
+				A6D3DE49265858E800D93371 /* CarouselCollectionViewCell.swift in Sources */,
+				A6D3DE5D2658F30800D93371 /* ZoomableImage.swift in Sources */,
 				A682B8FA265702430015A426 /* HomeCoordinator.swift in Sources */,
 				A682B8EF265702430015A426 /* Pic.swift in Sources */,
 				A682B902265702430015A426 /* SceneDelegate.swift in Sources */,
+				A6D3DE642659003200D93371 /* PicInfoView.swift in Sources */,
 				A6F7966226563A0400E9B0D8 /* FavGallery.xcdatamodeld in Sources */,
 				A682B8FE265702430015A426 /* FavoriteCoordinator.swift in Sources */,
 				A682B8F7265702430015A426 /* Coordinator.swift in Sources */,
@@ -367,6 +446,7 @@
 				A6D3DE2C265840EA00D93371 /* UIViewExtensions.swift in Sources */,
 				A682B8F4265702430015A426 /* Storyboarded.swift in Sources */,
 				A682B8FC265702430015A426 /* CameraCoordinator.swift in Sources */,
+				A6D3DE412658533A00D93371 /* CarouselCoordinator.swift in Sources */,
 				A682B901265702430015A426 /* NetworkHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,7 +601,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Lamborghini.FavGallery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naspes.favgallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -540,7 +620,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Lamborghini.FavGallery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naspes.favgallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

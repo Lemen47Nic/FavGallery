@@ -22,5 +22,12 @@ class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         let vc = HomeViewController.instantiate()
         viewController = vc
     }
+    
+    func showCarousel(pics: [Pic], selectedIndex: Int) {
+        let child = CarouselCoordinator(navigationController: navigationController, pics: pics, selectedIndex: selectedIndex)
+        childCoordinators.append(child)
+        child.parentCoordinator = self
+        child.start()
+    }
 }
     

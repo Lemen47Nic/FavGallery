@@ -9,12 +9,12 @@ import UIKit
 
 class GalleryCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak private var image: UIImageView!
+    @IBOutlet weak private var imageView: UIImageView!
     
     var pic: Pic? {
         didSet {
             guard let thumbnailUrl = pic?.thumbnailUrl else { return }
-            image.image(from: thumbnailUrl)
+            imageView.image(from: thumbnailUrl)
         }
     }
     
