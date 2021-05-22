@@ -19,6 +19,7 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
     
     @IBOutlet weak private var searchBar: SearchBarView!
     @IBOutlet weak private var gallery: GalleryCollectionView!
+    @IBOutlet weak private var alert: AlertView!
     
     private let picsService = PicsService()
     
@@ -42,6 +43,7 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
             
             DispatchQueue.main.async {
                 self?.gallery.isHidden = pics?.count == 0
+                self?.alert.isHidden = !(self?.gallery.isHidden ?? false)
             }
         }
     }
@@ -50,9 +52,7 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
 extension HomeViewController: SearchBarDelegate {
     
     func textDidChange(text: String?) {
-        guard let filter = text,
-              filter.trimmingCharacters(in: .whitespacesAndNewlines) != ""
-        else { return }
+        guard let filter = text else { return }
         updateGallery(filter: filter)
     }
 }

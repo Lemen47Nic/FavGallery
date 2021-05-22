@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertView" customModule="FavGallery" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VTi-Ec-dtW">
+            <rect key="frame" x="0.0" y="0.0" width="434" height="390"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6c-S6-D2D" userLabel="ContainerView">
+                    <rect key="frame" x="0.0" y="0.0" width="434" height="390"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your search didn't return any results" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9a-ej-l8s">
+                            <rect key="frame" x="0.0" y="0.0" width="434" height="390"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" systemColor="systemRedColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="O9a-ej-l8s" secondAttribute="bottom" id="KYN-5P-27b"/>
+                        <constraint firstItem="O9a-ej-l8s" firstAttribute="top" secondItem="K6c-S6-D2D" secondAttribute="top" id="XpQ-mb-2WW"/>
+                        <constraint firstItem="O9a-ej-l8s" firstAttribute="leading" secondItem="K6c-S6-D2D" secondAttribute="leading" id="pee-Oq-moF"/>
+                        <constraint firstAttribute="trailing" secondItem="O9a-ej-l8s" secondAttribute="trailing" id="tFJ-Zd-iM7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="1cz-27-BwC"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="K6c-S6-D2D" secondAttribute="trailing" id="1Kd-hh-Lfd"/>
+                <constraint firstItem="K6c-S6-D2D" firstAttribute="top" secondItem="VTi-Ec-dtW" secondAttribute="top" id="XFt-O6-i5Y"/>
+                <constraint firstAttribute="bottom" secondItem="K6c-S6-D2D" secondAttribute="bottom" id="mzI-WN-ysj"/>
+                <constraint firstItem="K6c-S6-D2D" firstAttribute="leading" secondItem="VTi-Ec-dtW" secondAttribute="leading" id="xeS-VW-BlK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-962.31884057971024" y="118.52678571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

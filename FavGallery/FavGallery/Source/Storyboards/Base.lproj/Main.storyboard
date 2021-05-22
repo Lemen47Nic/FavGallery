@@ -38,6 +38,12 @@
                                     <constraint firstAttribute="height" constant="50" id="Tob-Xu-JJv"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Tm-IO-WJq" customClass="AlertView" customModule="FavGallery" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="414" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Atf-cd-FMF"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cby-sP-X8g" customClass="GalleryCollectionView" customModule="FavGallery" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                             </view>
@@ -45,17 +51,21 @@
                         <viewLayoutGuide key="safeArea" id="Wzj-Nu-WQR"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tm-IO-WJq" firstAttribute="leading" secondItem="Wzj-Nu-WQR" secondAttribute="leading" id="4gn-ey-Wzz"/>
                             <constraint firstItem="Wzj-Nu-WQR" firstAttribute="trailing" secondItem="Cby-sP-X8g" secondAttribute="trailing" id="HXD-Wa-33r"/>
                             <constraint firstItem="Wzj-Nu-WQR" firstAttribute="trailing" secondItem="7Ut-zO-mr0" secondAttribute="trailing" id="Hxw-AR-4tS"/>
                             <constraint firstItem="7Ut-zO-mr0" firstAttribute="leading" secondItem="Wzj-Nu-WQR" secondAttribute="leading" id="JpJ-Rm-Tmc"/>
+                            <constraint firstItem="Wzj-Nu-WQR" firstAttribute="trailing" secondItem="6Tm-IO-WJq" secondAttribute="trailing" id="aon-H7-Lny"/>
                             <constraint firstItem="Wzj-Nu-WQR" firstAttribute="bottom" secondItem="Cby-sP-X8g" secondAttribute="bottom" id="caD-fl-Trl"/>
                             <constraint firstItem="Cby-sP-X8g" firstAttribute="top" secondItem="7Ut-zO-mr0" secondAttribute="bottom" id="ccy-VK-E0J"/>
+                            <constraint firstItem="6Tm-IO-WJq" firstAttribute="top" secondItem="7Ut-zO-mr0" secondAttribute="bottom" id="fMO-wL-SAw"/>
                             <constraint firstItem="7Ut-zO-mr0" firstAttribute="top" secondItem="Wzj-Nu-WQR" secondAttribute="top" id="jLd-xo-BmM"/>
                             <constraint firstItem="Cby-sP-X8g" firstAttribute="leading" secondItem="Wzj-Nu-WQR" secondAttribute="leading" id="tON-1d-3J9"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="alert" destination="6Tm-IO-WJq" id="xdK-8v-UcY"/>
                         <outlet property="gallery" destination="Cby-sP-X8g" id="nt3-do-4Dw"/>
                         <outlet property="searchBar" destination="7Ut-zO-mr0" id="M4O-DW-Uqb"/>
                     </connections>
