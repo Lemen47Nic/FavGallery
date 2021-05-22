@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,23 +8,130 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FavGallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraViewController" id="BYZ-38-t0r" customClass="CameraViewController" customModule="FavGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-820" y="102"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="aXh-Fu-oPn">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Ec3-7g-guP" customClass="HomeViewController" customModule="FavGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UMA-b3-ge2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ut-zO-mr0" customClass="SearchBarView" customModule="FavGallery" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Tob-Xu-JJv"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Tm-IO-WJq" customClass="AlertView" customModule="FavGallery" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="414" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Atf-cd-FMF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cby-sP-X8g" customClass="GalleryCollectionView" customModule="FavGallery" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wzj-Nu-WQR"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tm-IO-WJq" firstAttribute="leading" secondItem="Wzj-Nu-WQR" secondAttribute="leading" id="4gn-ey-Wzz"/>
+                            <constraint firstItem="Wzj-Nu-WQR" firstAttribute="trailing" secondItem="Cby-sP-X8g" secondAttribute="trailing" id="HXD-Wa-33r"/>
+                            <constraint firstItem="Wzj-Nu-WQR" firstAttribute="trailing" secondItem="7Ut-zO-mr0" secondAttribute="trailing" id="Hxw-AR-4tS"/>
+                            <constraint firstItem="7Ut-zO-mr0" firstAttribute="leading" secondItem="Wzj-Nu-WQR" secondAttribute="leading" id="JpJ-Rm-Tmc"/>
+                            <constraint firstItem="Wzj-Nu-WQR" firstAttribute="trailing" secondItem="6Tm-IO-WJq" secondAttribute="trailing" id="aon-H7-Lny"/>
+                            <constraint firstItem="Wzj-Nu-WQR" firstAttribute="bottom" secondItem="Cby-sP-X8g" secondAttribute="bottom" id="caD-fl-Trl"/>
+                            <constraint firstItem="Cby-sP-X8g" firstAttribute="top" secondItem="7Ut-zO-mr0" secondAttribute="bottom" id="ccy-VK-E0J"/>
+                            <constraint firstItem="6Tm-IO-WJq" firstAttribute="top" secondItem="7Ut-zO-mr0" secondAttribute="bottom" id="fMO-wL-SAw"/>
+                            <constraint firstItem="7Ut-zO-mr0" firstAttribute="top" secondItem="Wzj-Nu-WQR" secondAttribute="top" id="jLd-xo-BmM"/>
+                            <constraint firstItem="Cby-sP-X8g" firstAttribute="leading" secondItem="Wzj-Nu-WQR" secondAttribute="leading" id="tON-1d-3J9"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="alert" destination="6Tm-IO-WJq" id="xdK-8v-UcY"/>
+                        <outlet property="gallery" destination="Cby-sP-X8g" id="nt3-do-4Dw"/>
+                        <outlet property="searchBar" destination="7Ut-zO-mr0" id="M4O-DW-Uqb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KcJ-HJ-ZAe" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="-90" y="103"/>
+        </scene>
+        <!--Favorite View Controller-->
+        <scene sceneID="SU6-w4-OtY">
+            <objects>
+                <viewController storyboardIdentifier="FavoriteViewController" id="VjN-Ds-hXE" customClass="FavoriteViewController" customModule="FavGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vSU-jT-zvU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BiH-6s-zTA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16d-u1-u4a" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="102"/>
+        </scene>
+        <!--Carousel View Controller-->
+        <scene sceneID="dwB-2P-LDM">
+            <objects>
+                <viewController storyboardIdentifier="CarouselViewController" id="TIV-C3-sqp" customClass="CarouselViewController" customModule="FavGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CDU-ak-osP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88a-w9-Gh1" customClass="CarouselCollectionView" customModule="FavGallery" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CXl-FF-SWY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CXl-FF-SWY" firstAttribute="trailing" secondItem="88a-w9-Gh1" secondAttribute="trailing" id="2OL-2r-ena"/>
+                            <constraint firstItem="88a-w9-Gh1" firstAttribute="top" secondItem="CXl-FF-SWY" secondAttribute="top" id="38g-m1-UEI"/>
+                            <constraint firstItem="88a-w9-Gh1" firstAttribute="leading" secondItem="CXl-FF-SWY" secondAttribute="leading" id="A8e-tN-Z79"/>
+                            <constraint firstItem="CXl-FF-SWY" firstAttribute="bottom" secondItem="88a-w9-Gh1" secondAttribute="bottom" id="Zv7-lt-rec"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Iyl-u4-VYY">
+                        <barButtonItem key="leftBarButtonItem" image="square.split.diagonal.2x2.fill" catalog="system" id="5Ls-xu-E8L">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="close:" destination="TIV-C3-sqp" id="T9V-up-8bx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="carousel" destination="88a-w9-Gh1" id="0Qb-xI-pSK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VtU-g5-05D" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="-664"/>
         </scene>
     </scenes>
     <resources>
+        <image name="square.split.diagonal.2x2.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
