@@ -40,7 +40,7 @@
 		A6D3DE2426583EEA00D93371 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D3DE2326583EEA00D93371 /* GalleryCollectionViewCell.xib */; };
 		A6D3DE2726583F4800D93371 /* GalleryCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D3DE2626583F4800D93371 /* GalleryCollectionView.xib */; };
 		A6D3DE2C265840EA00D93371 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE2B265840EA00D93371 /* UIViewExtensions.swift */; };
-		A6D3DE2F265846CF00D93371 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE2E265846CF00D93371 /* UIImageExtensions.swift */; };
+		A6D3DE2F265846CF00D93371 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE2E265846CF00D93371 /* UIImageViewExtensions.swift */; };
 		A6D3DE3D2658533300D93371 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE3C2658533300D93371 /* CarouselViewController.swift */; };
 		A6D3DE412658533A00D93371 /* CarouselCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE402658533A00D93371 /* CarouselCoordinator.swift */; };
 		A6D3DE46265858DE00D93371 /* CarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE45265858DE00D93371 /* CarouselCollectionView.swift */; };
@@ -91,7 +91,7 @@
 		A6D3DE2326583EEA00D93371 /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		A6D3DE2626583F4800D93371 /* GalleryCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionView.xib; sourceTree = "<group>"; };
 		A6D3DE2B265840EA00D93371 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-		A6D3DE2E265846CF00D93371 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		A6D3DE2E265846CF00D93371 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		A6D3DE3C2658533300D93371 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		A6D3DE402658533A00D93371 /* CarouselCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCoordinator.swift; sourceTree = "<group>"; };
 		A6D3DE45265858DE00D93371 /* CarouselCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionView.swift; sourceTree = "<group>"; };
@@ -286,7 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				A6D3DE2B265840EA00D93371 /* UIViewExtensions.swift */,
-				A6D3DE2E265846CF00D93371 /* UIImageExtensions.swift */,
+				A6D3DE2E265846CF00D93371 /* UIImageViewExtensions.swift */,
 				A603262426593CB400DB4046 /* UIViewControllerExtensions.swift */,
 			);
 			path = Extensions;
@@ -461,7 +461,7 @@
 				A6D3DE1926583D2600D93371 /* GalleryCollectionView.swift in Sources */,
 				A6D3DE46265858DE00D93371 /* CarouselCollectionView.swift in Sources */,
 				A682B8F2265702430015A426 /* PicsService.swift in Sources */,
-				A6D3DE2F265846CF00D93371 /* UIImageExtensions.swift in Sources */,
+				A6D3DE2F265846CF00D93371 /* UIImageViewExtensions.swift in Sources */,
 				A682B8F1265702430015A426 /* PicsRepository.swift in Sources */,
 				A603263B26594D8C00DB4046 /* LocalImagesHandler.swift in Sources */,
 				A6D3DE3D2658533300D93371 /* CarouselViewController.swift in Sources */,
