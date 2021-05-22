@@ -50,7 +50,7 @@ protocol LocalImagesHandlerDelegate: AnyObject {
 
 class LocalImagesHandler: NSObject, LocalImagesHandlerProtocol {
 
-    public static var sharedInstance = LocalImagesHandler()
+    public static var shared = LocalImagesHandler()
     
     weak var delegate: LocalImagesHandlerDelegate?
     
