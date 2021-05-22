@@ -21,9 +21,14 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
     
     private let picsService = PicsService()
     
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    
     override func viewDidLoad() {
         picsService.get(by: "cat") { [weak self] (pics) in
             self?.gallery.pics = pics
         }
+        
+        // change status bar style (work only on physical device)
+        self.setNeedsStatusBarAppearanceUpdate()
     }
 }
