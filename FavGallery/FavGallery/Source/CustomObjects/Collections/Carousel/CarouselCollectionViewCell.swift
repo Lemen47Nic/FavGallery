@@ -47,4 +47,9 @@ class CarouselCollectionViewCell: UICollectionViewCell {
         picInfoView.title = pic?.title
         picInfoView.author = pic?.author
     }
+    
+    override func prepareForReuse() {
+        zoomableImage.image = UIImage()
+        zoomableImage.zoomScale = 1
+    }
 }

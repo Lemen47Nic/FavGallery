@@ -27,6 +27,12 @@ class ZoomableImage: UIView, UIScrollViewDelegate {
         }
     }
     
+    var zoomScale: CGFloat = 1 {
+        didSet {
+            scrollView.setZoomScale(zoomScale, animated: true)
+        }
+    }
+    
     // called when built from code
     override init(frame: CGRect) {
         super.init(frame: frame)
