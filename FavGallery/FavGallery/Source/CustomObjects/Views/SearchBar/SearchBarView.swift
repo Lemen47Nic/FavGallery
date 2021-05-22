@@ -7,9 +7,21 @@
 
 import UIKit
 
-class SearchBarView: UIView {
+protocol SearchBarDelegate {
+    func textDidChange(text: String?)
+}
+
+class SearchBarView: UIView, UITextFieldDelegate {
     
     @IBOutlet weak private var textField: UITextField!
+    
+    var delegate: SearchBarDelegate?
+    
+    var text: String? {
+        didSet {
+            textField.text = text
+        }
+    }
  
     // called when built from code
     override init(frame: CGRect) {
@@ -31,5 +43,11 @@ class SearchBarView: UIView {
         setup()
     }
     
-    private func setup() { }
+    private func setup() {
+        textField.delegate = self
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        delegate?.textDidChange(text: textField.text)
+    }
 }

@@ -17,6 +17,7 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
         _coordinator as? HomeCoordinator
     }
     
+    @IBOutlet weak private var searchBar: SearchBarView!
     @IBOutlet weak private var gallery: GalleryCollectionView!
     
     private let picsService = PicsService()
@@ -25,13 +26,28 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
     
     override func viewDidLoad() {
         
+        searchBar.delegate = self
         gallery.delegate = self
         
-        picsService.get(by: "cat") { [weak self] (pics) in
-            self?.gallery.pics = pics
-        }
+        let filter = randomDefaultFilter()
+        searchBar.text = filter
+        updateGallery(filter: filter)
         
         self.setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    private func updateGallery(filter: String) {
+        picsService.get(by: filter) { [weak self] (pics) in
+            self?.gallery.pics = pics
+        }
+    }
+}
+
+extension HomeViewController: SearchBarDelegate {
+    
+    func textDidChange(text: String?) {
+        guard let filter = text else { return }
+        updateGallery(filter: filter)
     }
 }
 
@@ -40,5 +56,13 @@ extension HomeViewController: GalleryDelegate {
     func didItemSelected(selectedIndex: Int) {
         guard let pics = gallery.pics else { return }
         coordinator?.showCarousel(pics: pics, selectedIndex: selectedIndex)
+    }
+}
+
+extension HomeViewController {
+    
+    private func randomDefaultFilter() -> String {
+        let values = ["cat", "dog", "bird", "fish", "spider", "mouse", "frog"]
+        return values[Int.random(in: 0..<values.count)]
     }
 }
