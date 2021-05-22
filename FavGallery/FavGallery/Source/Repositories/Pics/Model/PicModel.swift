@@ -8,6 +8,7 @@
 import Foundation
 
 struct PicModel: Pic {
+    var filter: String?
     var title: String?
     var author: String?
     var thumbnailUrl: String?

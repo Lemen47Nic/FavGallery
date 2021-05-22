@@ -11,6 +11,7 @@
 		A6032620265937B700DB4046 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A603261F265937B700DB4046 /* AlertView.xib */; };
 		A603262526593CB400DB4046 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603262426593CB400DB4046 /* UIViewControllerExtensions.swift */; };
 		A603262F2659415500DB4046 /* PicEntity+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603262E2659415500DB4046 /* PicEntity+Extensions.swift */; };
+		A6032633265941DD00DB4046 /* PicsPersistentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6032632265941DD00DB4046 /* PicsPersistentRepository.swift */; };
 		A682B8EC265702430015A426 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A682B8C9265702430015A426 /* LaunchScreen.storyboard */; };
 		A682B8ED265702430015A426 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A682B8CB265702430015A426 /* Main.storyboard */; };
 		A682B8EE265702430015A426 /* PicsNetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682B8CF265702430015A426 /* PicsNetworkRepository.swift */; };
@@ -61,6 +62,7 @@
 		A603261F265937B700DB4046 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		A603262426593CB400DB4046 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		A603262E2659415500DB4046 /* PicEntity+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PicEntity+Extensions.swift"; sourceTree = "<group>"; };
+		A6032632265941DD00DB4046 /* PicsPersistentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsPersistentRepository.swift; sourceTree = "<group>"; };
 		A682B8CA265702430015A426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A682B8CC265702430015A426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A682B8CF265702430015A426 /* PicsNetworkRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicsNetworkRepository.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				A682B8D0265702430015A426 /* Model */,
 				A682B8D3265702430015A426 /* PicsRepository.swift */,
 				A682B8D4265702430015A426 /* PicsService.swift */,
+				A6032632265941DD00DB4046 /* PicsPersistentRepository.swift */,
 			);
 			path = Pics;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				A682B8EE265702430015A426 /* PicsNetworkRepository.swift in Sources */,
 				A682B8FB265702430015A426 /* CameraViewController.swift in Sources */,
 				A682B8FD265702430015A426 /* FavoriteViewController.swift in Sources */,
+				A6032633265941DD00DB4046 /* PicsPersistentRepository.swift in Sources */,
 				A682B900265702430015A426 /* MainTabBarCoordinator.swift in Sources */,
 				A682B8F6265702430015A426 /* FavGalleryURL.swift in Sources */,
 				A603262526593CB400DB4046 /* UIViewControllerExtensions.swift in Sources */,

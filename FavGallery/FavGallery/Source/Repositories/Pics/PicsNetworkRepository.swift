@@ -22,17 +22,19 @@ class PicsNetworkRepository: PicsRepository {
         currentTask = NetworkHandler.shared.fetch(url: url, successRange: Range(200...201)) { [weak self] (result) in
             switch result {
             case .success(let data):
-                self?.managePics(data: data, completion)
+                self?.managePics(filter: filter, data: data, completion)
             case .failure(_):
                 completion(.failure(nil))
             }
         }
     }
+    
+    func save(_ pics: [Pic]) { }
 }
 
 extension PicsNetworkRepository {
     
-    private func managePics(data: Data?, _ completion: @escaping (_ result: AsyncCallResult<[Pic]?, Any?>) -> Void) {
+    private func managePics(filter: String, data: Data?, _ completion: @escaping (_ result: AsyncCallResult<[Pic]?, Any?>) -> Void) {
         
         guard let data = data,
               let json = try? JSONSerialization.jsonObject(with: data) as? [String:Any],
@@ -50,7 +52,7 @@ extension PicsNetworkRepository {
             else { return nil }
             
             var pic = PicModel()
-            pic.fill(with: $0)
+            pic.fill(with: $0, filter: filter)
             return pic
         }
         

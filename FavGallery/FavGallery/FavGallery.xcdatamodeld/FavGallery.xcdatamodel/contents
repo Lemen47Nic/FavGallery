@@ -2,11 +2,12 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="PicEntity" representedClassName="PicEntity" syncable="YES" codeGenerationType="class">
         <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="filter" optional="YES" attributeType="String"/>
         <attribute name="thumbnailUrl" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="url" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="PicEntity" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="PicEntity" positionX="-63" positionY="-18" width="128" height="104"/>
     </elements>
 </model>
