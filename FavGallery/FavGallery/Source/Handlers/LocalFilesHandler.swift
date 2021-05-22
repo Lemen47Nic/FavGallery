@@ -19,6 +19,7 @@ protocol LocalFilesHandlerProtocol {
     func fileExistAt(url: String, nameOfDirectory: String) -> Bool
     func getFilesFromDocumentDirectory(nameOfDirectory: String) -> [file_T?]
     func getUrlOfFileAt(index: Int, nameOfDirectory: String) -> String?
+    func getUrlOfFile(nameOfDirectory: String, fileName: String) -> String?
     func getNameOfFileAt(index: Int, nameOfDirectory: String) -> String?
     func deleteFileAt(url: String)
     func deleteAllFilesIn(nameOfDirectory: String)
@@ -63,6 +64,11 @@ extension LocalFilesHandlerProtocol {
             return filesURL[index].path
         }
         return nil
+    }
+    
+    func getUrlOfFile(nameOfDirectory: String, fileName: String) -> String? {
+        guard let filesURL = getFileUrlsFromDocumentDirectory(nameOfDirectory: nameOfDirectory) else { return nil }
+        return (filesURL.first { $0.lastPathComponent == fileName })?.path
     }
     
     func getNameOfFileAt(index: Int, nameOfDirectory: String) -> String? {
