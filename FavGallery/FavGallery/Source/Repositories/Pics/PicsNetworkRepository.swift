@@ -45,6 +45,10 @@ extension PicsNetworkRepository {
         
         let childrenSubData = (children.compactMap{ $0["data"] as? [String:Any] })
         let pics: [Pic] = childrenSubData.compactMap{
+            guard let type = $0["post_hint"] as? String,
+                  type == "image"
+            else { return nil }
+            
             var pic = PicModel()
             pic.fill(with: $0)
             return pic
