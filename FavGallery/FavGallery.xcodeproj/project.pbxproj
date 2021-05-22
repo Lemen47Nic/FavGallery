@@ -10,6 +10,8 @@
 		A603261D265937AF00DB4046 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603261C265937AF00DB4046 /* AlertView.swift */; };
 		A6032620265937B700DB4046 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A603261F265937B700DB4046 /* AlertView.xib */; };
 		A603262526593CB400DB4046 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603262426593CB400DB4046 /* UIViewControllerExtensions.swift */; };
+		A603263826594D3D00DB4046 /* LocalFilesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603263726594D3D00DB4046 /* LocalFilesHandler.swift */; };
+		A603263B26594D8C00DB4046 /* LocalImagesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603263A26594D8C00DB4046 /* LocalImagesHandler.swift */; };
 		A682B8EC265702430015A426 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A682B8C9265702430015A426 /* LaunchScreen.storyboard */; };
 		A682B8ED265702430015A426 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A682B8CB265702430015A426 /* Main.storyboard */; };
 		A682B8EE265702430015A426 /* PicsNetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682B8CF265702430015A426 /* PicsNetworkRepository.swift */; };
@@ -59,6 +61,8 @@
 		A603261C265937AF00DB4046 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		A603261F265937B700DB4046 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		A603262426593CB400DB4046 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		A603263726594D3D00DB4046 /* LocalFilesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFilesHandler.swift; sourceTree = "<group>"; };
+		A603263A26594D8C00DB4046 /* LocalImagesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalImagesHandler.swift; sourceTree = "<group>"; };
 		A682B8CA265702430015A426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A682B8CC265702430015A426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A682B8CF265702430015A426 /* PicsNetworkRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicsNetworkRepository.swift; sourceTree = "<group>"; };
@@ -243,6 +247,8 @@
 			isa = PBXGroup;
 			children = (
 				A682B8EA265702430015A426 /* NetworkHandler.swift */,
+				A603263726594D3D00DB4046 /* LocalFilesHandler.swift */,
+				A603263A26594D8C00DB4046 /* LocalImagesHandler.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -457,6 +463,7 @@
 				A682B8F2265702430015A426 /* PicsService.swift in Sources */,
 				A6D3DE2F265846CF00D93371 /* UIImageExtensions.swift in Sources */,
 				A682B8F1265702430015A426 /* PicsRepository.swift in Sources */,
+				A603263B26594D8C00DB4046 /* LocalImagesHandler.swift in Sources */,
 				A6D3DE3D2658533300D93371 /* CarouselViewController.swift in Sources */,
 				A682B8F5265702430015A426 /* NavigationJumper.swift in Sources */,
 				A6D3DE49265858E800D93371 /* CarouselCollectionViewCell.swift in Sources */,
@@ -479,6 +486,7 @@
 				A603262526593CB400DB4046 /* UIViewControllerExtensions.swift in Sources */,
 				A682B8F9265702430015A426 /* HomeViewController.swift in Sources */,
 				A6D3DE2C265840EA00D93371 /* UIViewExtensions.swift in Sources */,
+				A603263826594D3D00DB4046 /* LocalFilesHandler.swift in Sources */,
 				A682B8F4265702430015A426 /* Storyboarded.swift in Sources */,
 				A682B8FC265702430015A426 /* CameraCoordinator.swift in Sources */,
 				A6D3DE412658533A00D93371 /* CarouselCoordinator.swift in Sources */,
