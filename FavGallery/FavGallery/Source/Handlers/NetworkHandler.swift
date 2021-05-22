@@ -11,10 +11,10 @@ struct NetworkHandler {
     
     static let shared = NetworkHandler()
     
-    func fetch(url: String, successRange: Range<Int>?, completion: @escaping (AsyncCallResult<Data?, Any?>) -> Void) {
+    func fetch(url: String, successRange: Range<Int>?, completion: @escaping (AsyncCallResult<Data?, Any?>) -> Void) -> URLSessionDataTask? {
         guard let url = URL(string: url) else {
             completion(.failure(DataReponseError.invalidUrl))
-            return
+            return nil
         }
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
@@ -35,6 +35,8 @@ struct NetworkHandler {
             completion(.success(data))
         })
         task.resume()
+        
+        return task
     }
     
 }

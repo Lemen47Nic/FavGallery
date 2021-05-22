@@ -9,8 +9,10 @@ import Foundation
 
 struct PicsService {
     
+    let picsNetworkRepository = PicsNetworkRepository()
+    
     func get(by filter: String, completion: @escaping (_ result: [Pic]?) -> Void) {
-        PicsNetworkRepository.get(by: filter) { (result) in
+        picsNetworkRepository.get(by: filter) { (result) in
             if case .success(let pics) = result {
                 completion(pics)
             } else {
