@@ -56,10 +56,7 @@ class CarouselCollectionView: UIView, UICollectionViewDelegate, UICollectionView
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let screenSize: CGRect = UIScreen.main.bounds
-        let width = screenSize.width
-        let height = screenSize.height
-        return CGSize(width: width , height: height)
+        return collectionView.frame.size
     }
     
     func scrollTo(index: Int) {
