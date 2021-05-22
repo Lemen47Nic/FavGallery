@@ -31,7 +31,6 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
             self?.gallery.pics = pics
         }
         
-        // change status bar style (work only on physical device)
         self.setNeedsStatusBarAppearanceUpdate()
     }
 }

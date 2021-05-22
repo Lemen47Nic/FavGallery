@@ -85,7 +85,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CXl-FF-SWY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CXl-FF-SWY" firstAttribute="trailing" secondItem="88a-w9-Gh1" secondAttribute="trailing" id="2OL-2r-ena"/>
                             <constraint firstItem="88a-w9-Gh1" firstAttribute="top" secondItem="CXl-FF-SWY" secondAttribute="top" id="38g-m1-UEI"/>
