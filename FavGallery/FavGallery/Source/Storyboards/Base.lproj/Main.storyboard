@@ -114,7 +114,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Iyl-u4-VYY">
                         <barButtonItem key="leftBarButtonItem" image="square.split.diagonal.2x2.fill" catalog="system" id="5Ls-xu-E8L">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="close:" destination="TIV-C3-sqp" id="T9V-up-8bx"/>
                             </connections>
