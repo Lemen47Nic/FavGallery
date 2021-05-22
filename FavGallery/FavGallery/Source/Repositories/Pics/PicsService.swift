@@ -13,6 +13,8 @@ struct PicsService {
         PicsNetworkRepository.get(by: filter) { (result) in
             if case .success(let pics) = result {
                 completion(pics)
+            } else {
+                completion([])
             }
         }
     }

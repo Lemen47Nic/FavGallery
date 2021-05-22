@@ -39,6 +39,10 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
     private func updateGallery(filter: String) {
         picsService.get(by: filter) { [weak self] (pics) in
             self?.gallery.pics = pics
+            
+            DispatchQueue.main.async {
+                self?.gallery.isHidden = pics?.count == 0
+            }
         }
     }
 }
@@ -46,7 +50,9 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
 extension HomeViewController: SearchBarDelegate {
     
     func textDidChange(text: String?) {
-        guard let filter = text else { return }
+        guard let filter = text,
+              filter.trimmingCharacters(in: .whitespacesAndNewlines) != ""
+        else { return }
         updateGallery(filter: filter)
     }
 }
