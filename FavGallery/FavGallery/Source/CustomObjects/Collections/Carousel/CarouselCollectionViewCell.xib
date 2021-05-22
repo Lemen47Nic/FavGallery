@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarouselCollectionViewCell" customModule="FavGallery" customModuleProvider="target">
             <connections>
+                <outlet property="picInfoView" destination="ath-hB-51C" id="yfh-fe-G3E"/>
                 <outlet property="zoomableImage" destination="vOl-aH-ZLr" id="4gQ-1u-Y3I"/>
             </connections>
         </placeholder>
@@ -26,9 +27,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOl-aH-ZLr" customClass="ZoomableImage" customModule="FavGallery" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="180" height="219"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ath-hB-51C" customClass="PicInfoView" customModule="FavGallery" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="179" width="180" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jks-Iz-HHb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="vOl-aH-ZLr" secondAttribute="trailing" id="Dvj-e4-9wM"/>
+                            <constraint firstAttribute="bottom" secondItem="ath-hB-51C" secondAttribute="bottom" id="TOx-XX-d4B"/>
+                            <constraint firstAttribute="trailing" secondItem="ath-hB-51C" secondAttribute="trailing" id="UaX-kX-R5d"/>
+                            <constraint firstItem="ath-hB-51C" firstAttribute="leading" secondItem="iOe-Mo-4lA" secondAttribute="leading" id="Ugp-Ym-ia3"/>
                             <constraint firstItem="vOl-aH-ZLr" firstAttribute="top" secondItem="iOe-Mo-4lA" secondAttribute="top" id="Uzf-YT-SVn"/>
                             <constraint firstItem="vOl-aH-ZLr" firstAttribute="leading" secondItem="iOe-Mo-4lA" secondAttribute="leading" id="cMe-dx-qsS"/>
                             <constraint firstAttribute="bottom" secondItem="vOl-aH-ZLr" secondAttribute="bottom" id="hh9-1f-fDk"/>
