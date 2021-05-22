@@ -23,8 +23,8 @@ class PicsNetworkRepository: PicsRepository {
             switch result {
             case .success(let data):
                 self?.managePics(data: data, completion)
-            case .failure(let msg):
-                print("Error calling PicsNetworkRepository.get: \(String(describing: msg))")
+            case .failure(_):
+                completion(.failure(nil))
             }
         }
     }
