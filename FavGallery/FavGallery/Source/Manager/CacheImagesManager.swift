@@ -40,6 +40,11 @@ struct CacheImagesManager {
     
     private func getUIImageFromRemote(url: URL, completion: @escaping (_ image: UIImage?) -> Void) {
         
+        guard NetworkHandler.shared.isInternetAvailable() else {
+            completion(nil)
+            return
+        }
+        
         let imageView = UIImageView()
         imageView.image(from: url) {
             DispatchQueue.main.async {
