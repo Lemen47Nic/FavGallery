@@ -8,16 +8,9 @@
 import Foundation
 
 struct PicModel: Pic {
-    var title: String
-    var author: String
-    var thumbnailUrl: String
-    var url: String
-    
-    init() {
-        title = ""
-        author = ""
-        thumbnailUrl = ""
-        url = ""
-    }
+    var title: String?
+    var author: String?
+    var thumbnailUrl: String?
+    var url: String?
 }
 

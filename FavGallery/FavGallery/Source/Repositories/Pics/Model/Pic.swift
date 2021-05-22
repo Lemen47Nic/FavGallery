@@ -8,10 +8,10 @@
 import Foundation
 
 protocol Pic {
-    var title: String { get set }
-    var author: String { get set }
-    var thumbnailUrl: String { get set }
-    var url: String { get set }
+    var title: String? { get set }
+    var author: String? { get set }
+    var thumbnailUrl: String? { get set }
+    var url: String? { get set }
     
     mutating func fill(with data: [String: Any])
 }
