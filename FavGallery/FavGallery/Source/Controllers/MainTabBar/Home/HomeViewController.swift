@@ -68,7 +68,7 @@ extension HomeViewController: GalleryDelegate {
 extension HomeViewController {
     
     private func randomDefaultFilter() -> String {
-        let values = ["cat", "dog", "bird", "fish", "spider", "mouse", "frog"]
+        let values = ["cat", "cats", "dog", "deer", "fish", "disney", "art", "duck"]
         return values[Int.random(in: 0..<values.count)]
     }
 }
