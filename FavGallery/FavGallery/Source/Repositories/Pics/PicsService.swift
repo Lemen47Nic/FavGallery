@@ -9,14 +9,30 @@ import Foundation
 
 struct PicsService {
     
+    let picsPersistentRepository = PicsPersistentRepository()
     let picsNetworkRepository = PicsNetworkRepository()
     
     func get(by filter: String, completion: @escaping (_ result: [Pic]?) -> Void) {
-        picsNetworkRepository.get(by: filter) { (result) in
-            if case .success(let pics) = result {
+        
+        picsPersistentRepository.get(by: filter) { (persistenResult) in
+            
+            if case .success(let pics) = persistenResult,
+               pics?.count ?? 0 > 0 {
                 completion(pics)
-            } else {
-                completion([])
+                return
+            }
+            
+            picsNetworkRepository.get(by: filter) { (networkResult) in
+                if case .success(let pics) = networkResult {
+                    
+                    if let pics = pics {
+                        picsPersistentRepository.save(pics)
+                    }
+                    
+                    completion(pics)
+                } else {
+                    completion([])
+                }
             }
         }
     }

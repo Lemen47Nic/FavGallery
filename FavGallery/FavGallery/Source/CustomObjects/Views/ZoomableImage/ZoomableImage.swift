@@ -20,13 +20,6 @@ class ZoomableImage: UIView, UIScrollViewDelegate {
         }
     }
     
-    var link: String? {
-        didSet {
-            guard let link = link else { return }
-            imageView.image(from: link)
-        }
-    }
-    
     var zoomScale: CGFloat = 1 {
         didSet {
             scrollView.setZoomScale(zoomScale, animated: true)
