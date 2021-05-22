@@ -12,6 +12,8 @@ class CarouselCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var zoomableImage: ZoomableImage!
     @IBOutlet weak var picInfoView: PicInfoView!
     
+    private let cacheImages = CacheImagesManager()
+    
     var pic: Pic? {
         didSet {
             setupUI()
@@ -42,7 +44,10 @@ class CarouselCollectionViewCell: UICollectionViewCell {
     
     private func setupUI() {
         guard let url = pic?.url else { return }
-        zoomableImage.link = url
+        
+        cacheImages.getUIImage(from: url) { [weak self] (image) in
+            self?.zoomableImage.image = image
+        }
         
         picInfoView.title = pic?.title
         picInfoView.author = pic?.author

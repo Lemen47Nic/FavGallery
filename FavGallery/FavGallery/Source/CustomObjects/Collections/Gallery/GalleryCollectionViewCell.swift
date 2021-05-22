@@ -11,10 +11,14 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak private var imageView: UIImageView!
     
+    private let cacheImages = CacheImagesManager()
+    
     var pic: Pic? {
         didSet {
             guard let thumbnailUrl = pic?.thumbnailUrl else { return }
-            imageView.image(from: thumbnailUrl)
+            cacheImages.getUIImage(from: thumbnailUrl) { [weak self] (image) in
+                self?.imageView.image = image
+            }
         }
     }
     
