@@ -50,4 +50,9 @@ class SearchBarView: UIView, UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         delegate?.textDidChange(text: textField.text)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return false
+    }
 }

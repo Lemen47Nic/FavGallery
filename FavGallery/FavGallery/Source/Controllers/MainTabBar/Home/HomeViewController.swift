@@ -34,6 +34,8 @@ class HomeViewController: UIViewController, Storyboarded, CoordinatedController 
         searchBar.text = filter
         updateGallery(filter: filter)
         
+        hideKeyboardWhenTappedAround()
+        
         self.setNeedsStatusBarAppearanceUpdate()
     }
     
