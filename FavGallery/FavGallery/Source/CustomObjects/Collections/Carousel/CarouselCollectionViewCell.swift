@@ -9,7 +9,7 @@ import UIKit
 
 class CarouselCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak private var image: UIImageView!
+    @IBOutlet weak private var zoomableImage: ZoomableImage!
     
     var pic: Pic? {
         didSet {
@@ -41,6 +41,6 @@ class CarouselCollectionViewCell: UICollectionViewCell {
     
     private func setupUI() {
         guard let url = pic?.url else { return }
-        image.image(from: url)
+        zoomableImage.link = url
     }
 }

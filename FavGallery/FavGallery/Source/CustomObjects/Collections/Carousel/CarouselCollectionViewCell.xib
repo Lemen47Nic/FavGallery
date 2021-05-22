@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarouselCollectionViewCell" customModule="FavGallery" customModuleProvider="target">
             <connections>
-                <outlet property="image" destination="5cm-NX-8Hi" id="t2C-jJ-FNm"/>
+                <outlet property="zoomableImage" destination="vOl-aH-ZLr" id="4gQ-1u-Y3I"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" id="bNl-N9-MEd">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bNl-N9-MEd">
             <rect key="frame" x="0.0" y="0.0" width="180" height="219"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -23,15 +23,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-Mo-4lA">
                         <rect key="frame" x="0.0" y="0.0" width="180" height="219"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5cm-NX-8Hi">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOl-aH-ZLr" customClass="ZoomableImage" customModule="FavGallery" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="180" height="219"/>
-                            </imageView>
+                            </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="5cm-NX-8Hi" firstAttribute="top" secondItem="iOe-Mo-4lA" secondAttribute="top" id="Am9-hQ-ZWf"/>
-                            <constraint firstItem="5cm-NX-8Hi" firstAttribute="leading" secondItem="iOe-Mo-4lA" secondAttribute="leading" id="DUc-B2-gLt"/>
-                            <constraint firstAttribute="bottom" secondItem="5cm-NX-8Hi" secondAttribute="bottom" id="kiT-pX-HDc"/>
-                            <constraint firstAttribute="trailing" secondItem="5cm-NX-8Hi" secondAttribute="trailing" id="kwo-h1-8xv"/>
+                            <constraint firstAttribute="trailing" secondItem="vOl-aH-ZLr" secondAttribute="trailing" id="Dvj-e4-9wM"/>
+                            <constraint firstItem="vOl-aH-ZLr" firstAttribute="top" secondItem="iOe-Mo-4lA" secondAttribute="top" id="Uzf-YT-SVn"/>
+                            <constraint firstItem="vOl-aH-ZLr" firstAttribute="leading" secondItem="iOe-Mo-4lA" secondAttribute="leading" id="cMe-dx-qsS"/>
+                            <constraint firstAttribute="bottom" secondItem="vOl-aH-ZLr" secondAttribute="bottom" id="hh9-1f-fDk"/>
                         </constraints>
                     </view>
                 </subviews>
