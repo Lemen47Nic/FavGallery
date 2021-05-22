@@ -62,9 +62,17 @@ class GalleryCollectionView: UIView, UICollectionViewDelegate, UICollectionViewD
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
+        let interfaceOrientation = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.windowScene?.interfaceOrientation
+        
         let screenSize: CGRect = UIScreen.main.bounds
-        let width = screenSize.width / 3
-        let height = screenSize.height / 6
+        var width = screenSize.width / 3
+        var height = screenSize.height / 6
+        
+        if interfaceOrientation?.isLandscape ?? false {
+            width = screenSize.width / 6
+            height = screenSize.width / 5
+        }
+        
         return CGSize(width: width , height: height)
     }
 }
