@@ -46,6 +46,8 @@
 		A6D3DE5D2658F30800D93371 /* ZoomableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE5C2658F30800D93371 /* ZoomableImage.swift */; };
 		A6D3DE642659003200D93371 /* PicInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE632659003200D93371 /* PicInfoView.swift */; };
 		A6D3DE682659003700D93371 /* PicInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D3DE672659003700D93371 /* PicInfoView.xib */; };
+		A6D3DE772659234E00D93371 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D3DE762659234E00D93371 /* SearchBarView.swift */; };
+		A6D3DE7B2659236500D93371 /* SearchBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D3DE7A2659236400D93371 /* SearchBarView.xib */; };
 		A6F7966226563A0400E9B0D8 /* FavGallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6F7966026563A0400E9B0D8 /* FavGallery.xcdatamodeld */; };
 		A6F7966426563A0400E9B0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F7966326563A0400E9B0D8 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -90,6 +92,8 @@
 		A6D3DE5C2658F30800D93371 /* ZoomableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableImage.swift; sourceTree = "<group>"; };
 		A6D3DE632659003200D93371 /* PicInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicInfoView.swift; sourceTree = "<group>"; };
 		A6D3DE672659003700D93371 /* PicInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicInfoView.xib; sourceTree = "<group>"; };
+		A6D3DE762659234E00D93371 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		A6D3DE7A2659236400D93371 /* SearchBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarView.xib; sourceTree = "<group>"; };
 		A6F7965426563A0400E9B0D8 /* FavGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F7966126563A0400E9B0D8 /* FavGallery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavGallery.xcdatamodel; sourceTree = "<group>"; };
 		A6F7966326563A0400E9B0D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -289,6 +293,7 @@
 		A6D3DE572658F2E700D93371 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A6D3DE752659234000D93371 /* SearchBar */,
 				A6D3DE622658FFFE00D93371 /* PicInfo */,
 				A6D3DE582658F2EF00D93371 /* ZoomableImage */,
 			);
@@ -311,6 +316,15 @@
 				A6D3DE672659003700D93371 /* PicInfoView.xib */,
 			);
 			path = PicInfo;
+			sourceTree = "<group>";
+		};
+		A6D3DE752659234000D93371 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				A6D3DE762659234E00D93371 /* SearchBarView.swift */,
+				A6D3DE7A2659236400D93371 /* SearchBarView.xib */,
+			);
+			path = SearchBar;
 			sourceTree = "<group>";
 		};
 		A6F7964B26563A0400E9B0D8 = {
@@ -403,6 +417,7 @@
 				A6D3DE682659003700D93371 /* PicInfoView.xib in Resources */,
 				A682B8EC265702430015A426 /* LaunchScreen.storyboard in Resources */,
 				A6D3DE4C265858EF00D93371 /* CarouselCollectionView.xib in Resources */,
+				A6D3DE7B2659236500D93371 /* SearchBarView.xib in Resources */,
 				A6D3DE4F265858F300D93371 /* CarouselCollectionViewCell.xib in Resources */,
 				A6D3DE5A2658F2FD00D93371 /* ZoomableImage.xib in Resources */,
 				A6D3DE2726583F4800D93371 /* GalleryCollectionView.xib in Resources */,
@@ -428,6 +443,7 @@
 				A682B8F5265702430015A426 /* NavigationJumper.swift in Sources */,
 				A6D3DE49265858E800D93371 /* CarouselCollectionViewCell.swift in Sources */,
 				A6D3DE5D2658F30800D93371 /* ZoomableImage.swift in Sources */,
+				A6D3DE772659234E00D93371 /* SearchBarView.swift in Sources */,
 				A682B8FA265702430015A426 /* HomeCoordinator.swift in Sources */,
 				A682B8EF265702430015A426 /* Pic.swift in Sources */,
 				A682B902265702430015A426 /* SceneDelegate.swift in Sources */,
